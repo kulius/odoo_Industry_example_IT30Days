@@ -1,19 +1,24 @@
 ## 說明、緣由
 投入資訊產業約17年，歷經過許多的程式語言，也投入過不同的行業別，5年前開始接觸Odoo，並開始用他導入客戶，藉這次鐵人賽，選幾個案例流程，分享給邦友，讓大家也有機會可以認識及使用他
 
-## 所屬團隊
+## 所屬團隊 
 團隊 : odoo 邦邦忙
 透過三主題，協助大家了解odoo (open erp) 
-- odoo 開源系統與企業數位治理
-- odoo 模組開發實務
+- odoo [開源系統與企業數位治理](https://ithelp.ithome.com.tw/users/20134677/ironman/3879)
+- odoo [模組開發實務](https://ithelp.ithome.com.tw/users/20140778/ironman/4275)
 - odoo 實務流程與系統展示
 
 ## 自我練習平台
-https://runbot.odoo.com/
-- 帳號:admin
-- 密碼:admin
+- https://runbot.odoo.com/
+    - 帳號:admin
+    - 密碼:admin
 
-![image](https://prnt.sc/1sdp8za) 
+![image](https://raw.githubusercontent.com/kulius/odoo_Industry_example_IT30Days/main/Day01/1.png) 
+
+- 切換語系
+    - 進入開發者模式
+    
+    - 語系啓動及轉換
 
 ## 預期大綱
 - Odoo ERP 核心功能介紹
