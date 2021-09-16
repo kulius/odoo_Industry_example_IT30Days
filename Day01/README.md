@@ -4,14 +4,16 @@
 ## 所屬團隊
 團隊 : odoo 邦邦忙
 透過三主題，協助大家了解odoo (open erp) 
-- odoo ERP 簡介
+- odoo 開源系統與企業數位治理
 - odoo 模組開發實務
-- odoo 實務流程與系統實做
+- odoo 實務流程與系統展示
 
 ## 自我練習平台
 https://runbot.odoo.com/
 - 帳號:admin
 - 密碼:admin
+
+![image](https://prnt.sc/1sdp8za) 
 
 ## 預期大綱
 - Odoo ERP 核心功能介紹
@@ -40,6 +42,7 @@ https://runbot.odoo.com/
     - Odoo ERP 核心
 - IT流程五 待定-綠界及世華銀行支付客製
 - IT流程六 待定-IOT、APP 整全odoo
+- IT流程七 待定-MES與odoo整合
     
 至於為什麼會選這些主題及流程，主因是上述流程，用odoo的基本核心就可有個大概的展示內容，也期望大家看完後，能自己手動玩玩看，而不是需要客製才能呈現，最後二個流程展示一下Odoo的客製能力。
  
