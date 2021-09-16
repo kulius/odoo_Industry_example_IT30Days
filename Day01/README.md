@@ -17,8 +17,10 @@
 
 - 切換語系
     - 進入開發者模式
+![圖片](https://user-images.githubusercontent.com/1887931/133547890-44a1b00e-65e2-4cf8-8d87-1a9ee5c4d9af.png)
     
     - 語系啓動及轉換
+![圖片](https://user-images.githubusercontent.com/1887931/133547953-3cfb001d-8b72-4b4d-b01f-9988969cab68.png)
 
 ## 預期大綱
 - Odoo ERP 核心功能介紹
