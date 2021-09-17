@@ -22,3 +22,21 @@
 - 官方商城 [Odoo Apps Store](https://apps.odoo.com/apps)
 ![image](https://user-images.githubusercontent.com/1887931/133722092-1d65d7c8-4f5b-4e8d-a5e4-d6aac3877ddc.png)
 
+## Odoo ERP 核心功能及流程介紹 (銷售)
+- 銷售
+- 採購
+- 庫存
+- 會計
+- 製造
+- 電子商務
+- 公用系統
+
+## 銷售
+## 銷售
+## 採購
+## 庫存
+## 會計
+## 製造
+## 電子商務
+## 公用系統
+## 預期大綱
