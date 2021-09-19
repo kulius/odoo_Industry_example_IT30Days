@@ -1,7 +1,7 @@
-# Day 3 : 案例分享(一) B2C經典流程 電子商務、POS + 進銷存 + 會計(應收付) +製造(產品組合)
+# Day 3 : 案例分享(1.1) B2C經典流程 電子商務、POS + 進銷存 + 會計(應收付) +製造(產品組合、產品轉換)
 
-## 前情提要
->本來還想要說一下odoo的核心功能，但想想先進入主題，後續有機會再提
+
+## 案例前情提要
 
 會想來使用Odoo的公司，通常是在市面上現有ERP系統找不到解決方案的公司，歸納一下
 - 新創事業，無法花太多錢 (這是大多數人的前提)
@@ -12,56 +12,30 @@
 - 公司有會計系統、有POS系統，還要在電商操作系統，到處是系統，但袛有一個人
 >當您有個小買賣，有店面，有電商，有庫存，有CRM，有會計，有製造，是基本需求，為何市面上沒有整合的解決方案?，或是那個解決方案，根本就不是小買賣能負擔的!!
 
-## 前置準備->電子商務->線上付款->確認收款->庫存出貨
-- 前置準備
-    - 安裝模組 銷售、電子商務、會計、庫存
-    - 設定 paypal 或是 安裝綠界
-    ![image](https://user-images.githubusercontent.com/1887931/133759556-8a604120-370a-4c7e-8525-ee9454958d1a.png)
-    - 新增一個測試產品，給他庫存數量
+## 一.前置準備
+- 安裝模組 銷售、電子商務、會計、庫存、製造...其他想裝什麼就裝什麼
+- 安裝一堆 商城載下來的免費模組、佈景主題或是OCA的模組，或是花點錢，下載喜歡的佈景或addon，並不是說不裝不能動，而是你不裝addon用odoo有何意義，不如直接去找廠商幫你架網站
+![image](https://user-images.githubusercontent.com/1887931/133867811-b833d11e-4e5d-450c-a52f-e4a9c71034e9.png)
+- 用匯款，或安裝 paypal 或 安裝 [綠界](https://www.ecpay.com.tw/Intro/OdooIntro)
+ ![image](https://user-images.githubusercontent.com/1887931/133759556-8a604120-370a-4c7e-8525-ee9454958d1a.png)
+- 新增一個測試產品，給他庫存數量
     ![image](https://user-images.githubusercontent.com/1887931/133759930-19f8ef61-21f9-4d1e-9865-6fbe2a4c8738.png)
-    - 到這個產品的網站，發佈，然後拖拉一下說明
+- 到這個產品的網站，發佈，然後拖拉一下說明
     ![image](https://user-images.githubusercontent.com/1887931/133760299-2a14a64a-3353-4cb5-acf7-31035922ee1d.png)
+- 簡單的購物網站己完成，自訂的部份也都可以試試
+![image](https://user-images.githubusercontent.com/1887931/133873459-85e2012e-1fee-45d7-9415-985431d144d9.png)
 
+## 小結 Odoo是完善的ERP，不是完美的ERP
 
+>不想客製就要使用是可能的，但想用的順是不可能的，客製包含自己動手理解，找課程上，找顧問問，找工程師幫客製，上網看文章
 
-
-- [Odoo 官方網站](https://www.odoo.com/zh_TW)
-![image](https://user-images.githubusercontent.com/1887931/133721389-2d0da183-e65c-496b-8029-f9ab27069dea.png)
-
-## 現場販售POS->電子發票->日結過帳->扣庫存
-- M2O(多對1)
-```
-//資料庫ORM語法
-    user_id = fields.Many2one(
-        'res.users', string='Salesperson', index=True, tracking=2, default=lambda self: self.env.user,
-        domain=lambda self: [('groups_id', 'in', self.env.ref('sales_team.group_sale_salesman').id)])
-
-//View呈現XML語法
-    <field name="user_id"/>
-
-```
-![image](https://github.com/kulius/odoo_Industry_example_IT30Days/blob/main/gif/day2_m2o.gif?raw=true)
-- O2M(1對多)
-```
-//資料庫ORM語法
-    order_line = fields.One2many('sale.order.line', 'order_id', string='Order Lines', states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True, auto_join=True)
-
-//View呈現XML語法
-    <field name="order_line"/>
-
-```
-![image](https://github.com/kulius/odoo_Industry_example_IT30Days/blob/main/gif/day2_o2m.gif?raw=true)
-
-## 第三方的免費Addon
-- OCA odoo 開源組織 [The Odoo Community Association Website (OCA)](https://odoo-community.org/)
-- OCA 提供的開源 addon [Oca - Odoo Community Association · GitHub](https://github.com/OCA)
-- Odoo Apps Store [免費 addon](https://apps.odoo.com/apps?price=Free)
-
-## 多人參與的商城
-商城所販售的addon，都是原始碼，下載後，都可直接修改，odoo 8 時，大部份都是免費的addon，到現在，大多數都是付費addon，我反而覺得很好，因為有持續性的收入，才能讓社群、商城往更好的發展
-- 官方商城 [Odoo Apps Store](https://apps.odoo.com/apps)
-![image](https://user-images.githubusercontent.com/1887931/133722092-1d65d7c8-4f5b-4e8d-a5e4-d6aac3877ddc.png)
-
-## 學習資源
-- [odoo 官方文件](https://www.odoo.com/documentation/14.0/)
-- [元植管理顧問 odoo中文化的主要作者](https://www.yuanchih-consult.com/)
+## 二.暖個身，電子商務->金流->後台對帳->銷單出貨
+- 
+## 三.整合POS，日結產生應收及扣庫存
+## 四.整合製造，使用製造難道一定是複雜流程?
+## 結語
+- 小的公司，為了活下來，生意型態就愈複雜
+- 有時為了活的更好，就要捨棄賺的少又費工的工作
+- 能活下來，思考到E化的公司，商業流程通常己慢慢固定，也捨棄不少東西
+- E化也是如此，為了付出較少的金額買系統，會捨棄20%不必要的流程，改為人工 
+- 但思考一下，若80%的系統不用付出高額代價，是否願意投入 80%的金額，讓公司的特例流程 E化
