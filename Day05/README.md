@@ -7,7 +7,7 @@
 ![image](https://user-images.githubusercontent.com/1887931/134003298-a37581c4-6487-4af3-95d8-8ff21537e4da.png)
   
 - POS 銷售
-  >不太推使用Odoo的POS，主要是不太好客製，功能也離台灣習慣用的POS有點落差，主要還有電子發票的客製有點麻煩，有能力串接的話，把每日的帳和庫存轉進Odoo即可
+  >使用Odoo的POS，要特別電子發票、折扣及會員積點，這些常用的功能，在Odoo上都需要客製
 
 ![image](https://user-images.githubusercontent.com/1887931/134003950-f7e06ce9-225b-4c1e-9f40-fbad7003ebcd.png)
 - 日結結帳
